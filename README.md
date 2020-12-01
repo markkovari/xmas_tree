@@ -25,4 +25,3 @@ So basically we will run this bad boy (or girl or whatever gender zhy will choos
 We will update the documentation file `README.md` and append a newline or delete it. Doesn't make sense to load a lot of empty lines, DAAAA, we isn't stupid.
 
 So fork this repo somehere the FBI cannot find. Add it to the system deamons (sounds scary, nvm), and enjoy the green dots-squares whatever on github, you lazy, worthless. It's fine.
- 
