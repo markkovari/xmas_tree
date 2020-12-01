@@ -25,3 +25,12 @@ So basically we will run this bad boy (or girl or whatever gender zhy will choos
 We will update the documentation file `README.md` and append a newline or delete it. Doesn't make sense to load a lot of empty lines, DAAAA, we isn't stupid.
 
 So fork this repo somehere the FBI cannot find. Add it to the system deamons (sounds scary, nvm), and enjoy the green dots-squares whatever on github, you lazy, worthless. It's fine.
+
+
+You simply run the binary in the background like the animals. Hint: `./mxas_tree`, but wont work :smile: .
+Since I hard coded things, you fool.
+
+Don't be a manace just copy-pasta withyour path... gosh.
+
+Or if you want to go beyound the theoretical IQ limit, which is known 2000001. You can use system services.
+[hint](https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units)
