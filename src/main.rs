@@ -13,7 +13,6 @@ fn main() {
 }
 
 fn on_cron(_name: &str) {
-    println!("READIND FILE");
     let _file_dir = set_current_dir("/home/mark/DEV/xmasTree").unwrap();
     let mut contents = fs::read_to_string("./README.md")
         .expect("Something went wrong reading the file, maybe you should do it the lame way");
@@ -32,8 +31,4 @@ fn on_cron(_name: &str) {
         .output()
         .unwrap();
     let mut _git_push_result = Command::new("git").arg("push").output().unwrap();
-    println!(
-        "achtung-achtung {:?} {:?} {:?}",
-        _git_add_result, _git_commit_result, _git_push_result
-    );
 }
