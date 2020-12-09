@@ -31,4 +31,5 @@ fn on_cron(_name: &str) {
         .output()
         .unwrap();
     let mut _git_push_result = Command::new("git").arg("push").output().unwrap();
+    println!("{:?}", _git_push_result);
 }
