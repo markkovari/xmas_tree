@@ -22,7 +22,8 @@ fn on_cron(_name: &str) {
         contents.remove(contents.len() - 1);
         let _result = fs::write("./README.md", contents);
     }
-
+    let pull = Command::new("git").arg("pull").output().unwrap();
+    println!("pull cmd res {:?}", pull);
     let add = Command::new("git").arg("add").arg("-A").output().unwrap();
     println!("add cmd res {:?}", add);
     let commit = Command::new("git")
