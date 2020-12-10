@@ -3,6 +3,7 @@ use cronjob::CronJob;
 use std::env::set_current_dir;
 use std::fs;
 use std::process::Command;
+use std::env::current_dir;
 
 fn main() {
     let mut cron = CronJob::new("xmas_tree", on_cron);
