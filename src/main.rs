@@ -25,13 +25,15 @@ fn on_cron(_name: &str) {
     }
 
     let add = Command::new("git").arg("add").arg("-A").output().unwrap();
-    Command::new("git")
+    println!("{:?}", add);
+    let commit = Command::new("git")
         .arg("commit")
         .arg("-m")
         .arg("yeah cheating")
         .output()
         .unwrap();
-    Command::new("git").arg("push").output().unwrap();
+    println!("{:?}", commit);
+    let push = Command::new("git").arg("push").output().unwrap();
     Command::new("cargo").arg("build").output().unwrap();
     Command::new("cp").arg("./target/debug/xmas_tree").arg("./").output().unwrap();
 
