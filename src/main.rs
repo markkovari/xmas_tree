@@ -32,7 +32,7 @@ fn on_cron(_name: &str) {
         .output()
         .unwrap();
     println!("commit cmd res {:?}", commit);
-    let push = Command::new("git").arg("push").output().unwrap();
+    let push = Command::new("git").arg("push").arg("--force").output().unwrap();
     println!("push comd res {:?}", push);
 
 }
