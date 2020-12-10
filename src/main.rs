@@ -14,7 +14,6 @@ fn main() {
 
 fn on_cron(_name: &str) {
     set_current_dir("/home/mark/DEV/xmasTree").unwrap();
-    println!("{:?}", current_dir().unwrap());
     let mut contents = fs::read_to_string("./README.md")
         .expect("Something went wrong reading the file, maybe you should do it the lame way");
     if contents.len() % 2 == 0 {
@@ -25,15 +24,15 @@ fn on_cron(_name: &str) {
     }
 
     let add = Command::new("git").arg("add").arg("-A").output().unwrap();
-    println!("{:?}", add);
+    println!("add cmd res {:?}", add);
     let commit = Command::new("git")
         .arg("commit")
         .arg("-m")
         .arg("yeah cheating")
         .output()
         .unwrap();
-    println!("{:?}", commit);
+    println!("commit cmd res {:?}", commit);
     let push = Command::new("git").arg("push").output().unwrap();
-    println!("{:?}", push);
+    println!("push comd res {:?}", push);
 
 }
