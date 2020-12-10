@@ -13,6 +13,8 @@ fn main() {
 }
 
 fn on_cron(_name: &str) {
+
+    println!("{:?}", current_dir().unwrap());
     let _file_dir = set_current_dir("/home/mark/DEV/xmasTree").unwrap();
     let mut contents = fs::read_to_string("./README.md")
         .expect("Something went wrong reading the file, maybe you should do it the lame way");
