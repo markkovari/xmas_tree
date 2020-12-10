@@ -12,7 +12,7 @@ fn main() {
 }
 
 fn on_cron(_name: &str) {
-    let _file_dir = set_current_dir("/home/mark/DEV/xmasTree").unwrap();
+    set_current_dir("/home/mark/DEV/xmasTree").unwrap();
     let mut contents = fs::read_to_string("./README.md")
         .expect("Something went wrong reading the file, maybe you should do it the lame way");
     if contents.len() % 2 == 0 {
@@ -22,12 +22,15 @@ fn on_cron(_name: &str) {
         let _result = fs::write("./README.md", contents);
     }
 
-    let mut _git_add_result = Command::new("git").arg("add").arg("-A").output().unwrap();
-    let mut _git_commit_result = Command::new("git")
+    Command::new("git").arg("add").arg("-A").output().unwrap();
+    Command::new("git")
         .arg("commit")
         .arg("-m")
         .arg("yeah cheating")
         .output()
         .unwrap();
-    let mut _git_push_result = Command::new("git").arg("push").output().unwrap();
+    Command::new("git").arg("push").output().unwrap();
+    Command::new("cargo").arg("build").output().unwrap();
+    Command::new("mv").arg("./target/debug/xmas_tree").arg("./").output().unwrap();
+
 }
