@@ -7,8 +7,7 @@ use std::process::Command;
 fn main() {
     let mut cron = CronJob::new("xmas_tree", on_cron);
     cron.seconds("0");
-    cron.minutes("0-5");
-    cron.hours("8-16");
+    cron.minutes("0-59");
     cron.start_job();
 }
 
@@ -31,5 +30,4 @@ fn on_cron(_name: &str) {
         .output()
         .unwrap();
     let mut _git_push_result = Command::new("git").arg("push").output().unwrap();
-    println!("{:?}", _git_push_result);
 }
