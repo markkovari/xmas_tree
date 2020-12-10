@@ -33,4 +33,4 @@ Since I hard coded things, you fool.
 Don't be a manace just copy-pasta withyour path... gosh.
 
 Or if you want to go beyound the theoretical IQ limit, which is known 2000001. You can use system services.
-[hint](https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units
+[hint](https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units 
