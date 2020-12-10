@@ -7,7 +7,8 @@ use std::process::Command;
 fn main() {
     let mut cron = CronJob::new("xmas_tree", on_cron);
     cron.seconds("0");
-    cron.minutes("0-59");
+    cron.minutes("0-5");
+    cron.hours("7-18");
     cron.start_job();
 }
 
