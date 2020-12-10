@@ -33,6 +33,6 @@ fn on_cron(_name: &str) {
         .unwrap();
     Command::new("git").arg("push").output().unwrap();
     Command::new("cargo").arg("build").output().unwrap();
-    Command::new("mv").arg("./target/debug/xmas_tree").arg("./").output().unwrap();
+    Command::new("cp").arg("./target/debug/xmas_tree").arg("./").output().unwrap();
 
 }
