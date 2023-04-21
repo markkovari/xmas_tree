@@ -10,12 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Setup Wasmer
-        uses: wasmerio/setup-wasmer@v1
       - run: |
           git config user.name markkovari
           git config user.email kovarimarkofficial@gmail.com #dont send me emails bro, i dont want to see them, don't try to hurt my family again, you know where this road leads ...
-          wasmer run --dir=. --enable-all ./xmas_tree.wasm
+          chmod +x ./xmas_tree
+          ./xmas_tree
           git add .
           git commit -m "Yolo: $(date) :rocket: :monkey: :moneybag:"
           git push --force
