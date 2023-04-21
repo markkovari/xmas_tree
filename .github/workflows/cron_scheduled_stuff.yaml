@@ -10,11 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Use wasmtime 0.21.0
+        uses: mwilliamson/setup-wasmtime-action@v2
+        with:
+          wasmtime-version: "0.21.0"
       - run: |
           git config user.name markkovari
           git config user.email kovarimarkofficial@gmail.com #dont send me emails bro, i dont want to see them, don't try to hurt my family again, you know where this road leads ...
-          chmod +x ./xmas_tree
-          ./xmas_tree
+          wasmtime --dir=. xmas_tree.wasm
           git add .
           git commit -m "Yolo: $(date) :rocket: :monkey: :moneybag:"
           git push --force
