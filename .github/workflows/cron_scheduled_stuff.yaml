@@ -16,7 +16,7 @@ jobs:
           wasmtime-version: "0.21.0"
       - run: |
           git config user.name markkovari
-          git config user.email kovarimarkofficial@gmail.com #dont send me emails bro, i dont want to see them, don't try to hurt my family again, you know where this road leads ...
+          git config user.email markkovari@users.noreply.github.com
           wasmtime --dir=. xmas_tree.wasm
           git add .
           git commit -m "Yolo: $(date) :rocket: :monkey: :moneybag:"
